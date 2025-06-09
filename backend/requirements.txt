@@ -1,5 +1,0 @@
-Django>=4.2
-gunicorn
-psycopg2-binary
-python-decouple
-django-cors-headers
