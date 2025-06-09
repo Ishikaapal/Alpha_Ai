@@ -1,0 +1,246 @@
+/* App.css */
+
+.App {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Animation for React logo (optional) */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Task Form */
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Filter */
+select {
+  margin-bottom: 30px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Task List */
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  position: relative;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 0 0 10px;
+  min-height: 40px;
+}
+
+.card span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.card button:first-of-type {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.card button:first-of-type:hover {
+  background-color: #e0a800;
+}
+
+.card button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+.card button:last-of-type:hover {
+  background-color: #a71d2a;
+}
+
+/* Modal Background */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(2px);
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  padding: 8px 16px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 90px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:first-of-type {
+  background-color: #28a745;
+  color: white;
+}
+
+.modal-content button:first-of-type:hover {
+  background-color: #1e7e34;
+}
+
+.modal-content button:last-of-type {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-content button:last-of-type:hover {
+  background-color: #565e64;
+}
+
+/* Modal fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Toastify fixes */
+.Toastify__toast-container {
+  z-index: 10000;
+}
+
+/* Body scroll lock when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .task-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .task-form input,
+  .task-form button {
+    width: 100%;
+  }
+
+  .task-form button {
+    margin-top: 5px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+}
